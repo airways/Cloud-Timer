@@ -100,11 +100,11 @@ Inherits WebApplication
 
 
 	#tag Note, Name = Readme
-		= About =
+		## About
 		This example is provided by Near North Software. Please visit us online at https://www.nearnorthsoftware.com
 		
 		
-		= Timer Logic =
+		## Timer Logic
 		
 		Customize the ServiceTimer class' Action event handler to do whateve ryou need.
 		
@@ -114,24 +114,24 @@ Inherits WebApplication
 		After this first run, the timer will thereafter run at the kInterval period instead.
 		
 		
-		= Authentication =
+		## Authentication
 		
 		Please change the kAdminUsername, kAdminPassword, and kAdminSalt values to something specific for your application.
 		kAdminPassword may be plain text but you should instead set it to a hashed value with the following code added to the
 		App.Open() event handler:
 		
-		App.Log("your_new_password_here!!123" + kAdminSalt)
+		App.Log(MD5("your_new_password_here!!123" + kAdminSalt))
 		
 		Take the value from the app log, remove this line of code, and use the hashed value in kAdminPassword. If you change
 		kAdminSalt after doing this, you will need to recalculate the hash.
 		
 		
-		= Email =
+		## Email
 		
 		To use SendEmail method you will need to set all of the kEmail* and kSMTP* constants on the App object correctly.
 		
 		
-		= License =
+		## License
 		
 		Copyright (c)2018-2019. Near North Software.
 		
@@ -152,6 +152,7 @@ Inherits WebApplication
 		"Near North", "Near North Software", and "Near North Screenshots" are trademarks of Near North Software. All other
 		trademarks cited herein are the property of their respective owners. All company, product and service names used in
 		this software are for identification purposes only. Use of these names, logos, and brands does not imply endorsement.
+		
 	#tag EndNote
 
 
